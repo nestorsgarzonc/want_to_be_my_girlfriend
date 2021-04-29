@@ -112,20 +112,19 @@ class OhYeahScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(width: double.infinity),
-            Image.network(
-              'https://static.wikia.nocookie.net/memes-pedia/images/2/2c/89592b3392fee110134235e95d80dbf7.jpg/revision/latest?cb=20200527113030&path-prefix=es',
-              height: size.height * 0.5,
-            ),
-            SizedBox(height: 30),
-            Text('Oh Yeah!', style: TextStyle(fontSize: 30)),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          BackButton(),
+          SizedBox(width: double.infinity, height: 20),
+          Image.network(
+            'https://static.wikia.nocookie.net/memes-pedia/images/2/2c/89592b3392fee110134235e95d80dbf7.jpg/revision/latest?cb=20200527113030&path-prefix=es',
+            height: size.height * 0.5,
+          ),
+          SizedBox(height: 30),
+          Text('Oh Yeah!', style: TextStyle(fontSize: 30)),
+        ],
       ),
     );
   }
